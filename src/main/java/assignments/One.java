@@ -259,4 +259,26 @@ public class One {
         }
 
     }
+
+    /**
+     * 1-Watermelon
+     * The first(and only)input line contains an integer number—the weight of the
+     * watermelon bought by the boys. ( <--- English :D)
+     */
+    public static void watermelon() {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the weight of the watermelon
+        int weight = scanner.nextInt();
+
+        // Check if the weight can be divided into two even parts
+        if (weight % 2 == 0 && weight > 2) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+
+        scanner.close();
+    }
+
 }
