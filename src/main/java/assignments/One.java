@@ -281,4 +281,49 @@ public class One {
         scanner.close();
     }
 
+    /**
+     * 2-SortingThreeFloatingNumbers
+     * Write a program that reads in three Floating-point numbers and sort them.
+     */
+    public static void sortThreeFloatingNumbers() {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read three numbers from the user
+        System.out.print("Enter the first number: ");
+        float num1 = scanner.nextFloat();
+
+        System.out.print("Enter the second number: ");
+        float num2 = scanner.nextFloat();
+
+        System.out.print("Enter the third number: ");
+        float num3 = scanner.nextFloat();
+
+        scanner.close();
+
+        // 2.5
+        // 9
+        // 4
+        if (num1 > num2) { // 2.5 > 9 => false
+            float temp = num1; // block is skipped
+            num1 = num2;
+            num2 = temp;
+        }
+
+        if (num1 > num3) { // 2.5 > 4 => false
+            float temp = num1; // block is skipped
+            num1 = num3;
+            num3 = temp;
+        }
+
+        if (num2 > num3) { // 9 > 4 => true
+            float temp = num2; // temp = 9
+            num2 = num3; // num2 = 4
+            num3 = temp; // num3 = 9
+        }
+
+        System.out.println("Sorted numbers :");
+        System.out.println(num1); // 2.5
+        System.out.println(num2); // 4
+        System.out.println(num3); // 9
+    }
 }
