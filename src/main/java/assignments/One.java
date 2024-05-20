@@ -357,4 +357,22 @@ public class One {
         System.out.println("Min = " + min);
     }
 
+    /**
+     * 6-what is the value of x,y,z and w
+     * int x =3;
+     * int y =2;
+     * int z =X++;
+     * int w =++Y;
+     */
+    public static void whatIsTheValue() {
+        int x = 3;
+        int y = 2;
+        int z = x++;
+        int w = ++y;
+
+        System.out.println("x = " + x); // 4 😎 // because x was incremented after being assigned to z
+        System.out.println("y = " + y); // 3 😎 // because y was incremented before being assigned to w
+        System.out.println("z = " + z); // 3 😎 // because z was assigned the value of x before x was incremented
+        System.out.println("w = " + w); // 3 😎 // because w was assigned the value of y after y was incremented
+    }
 }
