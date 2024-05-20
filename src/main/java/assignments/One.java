@@ -428,4 +428,225 @@ public class One {
         System.out.println("Area is = " + area);
 
     }
+
+    /**
+     * 9-A program to print numbers divisible by 5, for the integers from 1 to 99.
+     */
+    public static void numbersDivisibleBy5() {
+        for (int i = 1; i <= 99; i++) {
+            if (i % 5 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    /**
+     * 10-Your program print the numbers from one up to 100 in ascending order
+     */
+    public static void numbersFrom1To100() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(i);
+        }
+    }
+
+    /**
+     * 11-Your program print the numbers from one up to 100 in descending order
+     */
+    public static void numbersFrom100To1() {
+        for (int i = 100; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }
+
+    /**
+     * 12-You take two number from the user , base and power The output: Base ^
+     * power
+     */
+    public static void powerNumber() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the base number: ");
+        int base = scanner.nextInt();
+
+        System.out.print("Enter the power number: ");
+        int power = scanner.nextInt();
+
+        scanner.close();
+
+        long result = 1;
+
+        for (int i = 0; i < power; i++) {
+            result *= base;
+        }
+
+        System.out.println(base + " ^ " + power + " = " + result);
+    }
+
+    /**
+     * 13-You will take number from the user Write a java program to print its
+     * factorial.
+     */
+    public static void factorial() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        scanner.close();
+
+        int factorial = 1;
+
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+
+        System.out.println("Factorial of " + number + " is: " + factorial);
+    }
+
+    /**
+     * 14-program to display the following sequence of numbers
+     * : 7 14 21 28 35 42 49 56 63 70 77 84 91 98
+     */
+    public static void sequenceOfNumbers() {
+        for (int i = 7; i <= 98; i += 7) {
+            System.out.println(i);
+        }
+    }
+
+    /**
+     * 15-Program to display the following sequence of numbers:
+     * 1 2 4 8 16 32 64 128 256 512
+     */
+    public static void sequenceOfNumbers2() {
+        for (int i = 1; i <= 512; i *= 2) {
+            System.out.println(i);
+        }
+    }
+
+    /**
+     * 16-Write an application that calculates the product of the odd integers from
+     * 1 to 15.
+     */
+    public static void productOfOddIntegers() {
+        int product = 1;
+
+        for (int i = 1; i <= 15; i += 2) {
+            product *= i;
+        }
+
+        System.out.println("Product of odd integers from 1 to 15: " + product);
+
+    }
+
+    /**
+     * 17-Write a java program that read positive numbers from user Until read a
+     * negative number ... then calculate and print The average of these numbers.
+     */
+    public static void averageOfPositiveNumbers() {
+        Scanner scanner = new Scanner(System.in);
+
+        int sum = 0;
+        int count = 0;
+
+        while (true) {
+            System.out.print("Enter a number: ");
+            int number = scanner.nextInt();
+
+            if (number < 0) {
+                break;
+            }
+
+            sum += number;
+            count++;
+        }
+
+        scanner.close();
+
+        double average = (double) sum / count;
+
+        System.out.println("Average of the numbers: " + average);
+    }
+
+    /**
+     * 18- Write java program to read integer from user then print sum of digit
+     * means add all the digits of any number for example if user enter 123 .output
+     * is 6 because 1 +2 +3 = 6 an so on
+     */
+    public static void sumOfDigits() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        scanner.close();
+
+        int sum = 0;
+
+        while (number != 0) {
+            sum += number % 10;
+            number /= 10;
+        }
+
+        System.out.println("Sum of digits: " + sum);
+    }
+
+    /**
+     * 19-Write java program to read an integer from user then print how many digit
+     * in this number
+     */
+    public static void countDigits() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        scanner.close();
+
+        int count = 0;
+
+        while (number != 0) {
+            number /= 10;
+            count++;
+        }
+
+        System.out.println("Number of digits: " + count);
+    }
+
+    /**
+     * 20-Given a number, print how many times can we divide it by 2?
+     */
+    public static void divideBy2() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        scanner.close();
+
+        int count = 0;
+
+        while (number % 2 == 0) {
+            number /= 2;
+            count++;
+        }
+
+        System.out.println("Number of times we can divide by 2: " + count);
+    }
+
+    /**
+     * 13-Write a program that displays all the numbers from 100 to
+     * 200, ten per line, that are divisible by 5 or 6, but not both.
+     * Numbers are separated by exactly one space
+     */
+    public static void numbersDivisibleBy5Or6() {
+        for (int i = 100; i <= 200; i++) {
+            if ((i % 5 == 0 || i % 6 == 0) && (i % 5 != 0 && i % 6 != 0)) {
+                System.out.print(i + " ");
+                if (i % 10 == 0) {
+                    System.out.println();
+                }
+            }
+        }
+    }
+
 }

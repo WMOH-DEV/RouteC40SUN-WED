@@ -70,7 +70,7 @@ public class SortingAndSearch {
             }
         }
 
-        // We reach here when the element is not present in the array
+        // element is not present in the array :(
         return -1;
     }
 
