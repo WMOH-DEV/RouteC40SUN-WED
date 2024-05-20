@@ -375,4 +375,39 @@ public class One {
         System.out.println("z = " + z); // 3 😎 // because z was assigned the value of x before x was incremented
         System.out.println("w = " + w); // 3 😎 // because w was assigned the value of y after y was incremented
     }
+
+    /**
+     * 7-Write a program to calculate the sum of positive integers and sum of
+     * negative integers for 6 integers.
+     */
+    public static void sumOfPositiveAndNegativeIntegers() {
+        Scanner scanner = new Scanner(System.in);
+
+        // Initialize sums
+        int sumPositive = 0; // pre var To store the sum of positive integers
+        int sumNegative = 0; // pre var To store the sum of negative integers
+
+         // Read 6 integers from the user
+        System.out.println("Enter 6 integers:");
+
+        for (int i = 0; i < 6; i++) {
+            int num = scanner.nextInt(); // the next integer input
+
+            // Check if the number is positive
+            if (num > 0) {
+                sumPositive += num; // Add the positive number to sumPositive
+            } 
+            // Check if the number is negative
+            else if (num < 0) {
+                sumNegative += num; // Add the negative number to sumNegative
+            }
+        }
+
+        scanner.close(); // Close the scanner 😣
+
+        // Print the results 🥳
+        System.out.println("Sum of positive integers: " + sumPositive);
+        System.out.println("Sum of negative integers: " + sumNegative);
+    }
+    }
 }
