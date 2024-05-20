@@ -410,4 +410,22 @@ public class One {
         System.out.println("Sum of negative integers: " + sumNegative);
     }
 
+    /**
+     * 8-Write a Java program to print the area of a circle.
+     */
+    public static void areaOfCircle() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the radius of the circle: ");
+        double radius = scanner.nextDouble();
+
+        scanner.close();
+
+        double pi = 3.141592653589793; // Value of π from internet 😅
+        double area = pi * radius * radius; // Calculate the area of the circle
+
+        // Print the result
+        System.out.println("Area is = " + area);
+
+    }
 }
