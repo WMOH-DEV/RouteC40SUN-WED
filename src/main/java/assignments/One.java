@@ -326,4 +326,35 @@ public class One {
         System.out.println(num2); // 4
         System.out.println(num3); // 9
     }
+
+    /**
+     * 3-MinAndMax
+     * Write a program that reads in three integers and prints the minimum and
+     * maximum
+     */
+    public static void minAndMax() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        System.out.print("Enter the third number: ");
+        int num3 = scanner.nextInt();
+
+        scanner.close();
+
+        // Max -> shorthand if :)
+        int max = (num1 > num2) ? (num1 > num3 ? num1 : num3) : (num2 > num3 ? num2 : num3);
+
+        // Min -> shorthand if :)
+        int min = (num1 < num2) ? (num1 < num3 ? num1 : num3) : (num2 < num3 ? num2 : num3);
+
+        // Print the results ^.^
+        System.out.println("Max = " + max);
+        System.out.println("Min = " + min);
+    }
+
 }
